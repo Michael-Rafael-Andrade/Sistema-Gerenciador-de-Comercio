@@ -1,0 +1,26 @@
+
+<fieldset>
+    <legend>
+        Clientes Cadastrados
+    </legend>
+    <table border="1">
+        <tr>
+            <th>
+                ID
+            </th>
+            <th>
+                NOME
+            </th>
+        </tr>
+        {{#each clientes}}
+            <tr>
+                <td>
+                    {{this.id}}
+                </td>
+                <td>
+                    {{this.nome}}
+                </td>
+            </tr>
+        {{/each}}
+    </table>
+</fieldset>
