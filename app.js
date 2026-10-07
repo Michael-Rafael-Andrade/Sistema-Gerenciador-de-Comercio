@@ -7,6 +7,7 @@ var logger = require('morgan');
 var rotasIndex = require('./routes/RotasIndex');
 var rotasUsers = require('./routes/RotasUsers');
 var rotasClientes = require('./routes/RotasClientes');
+var rotasProdutos = require('./routes/RoutesProdutos');
 
 var app = express();
 
@@ -23,6 +24,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', rotasIndex);
 app.use('/users', rotasUsers);
 app.use('/cliente', rotasClientes);
+app.use('/produto', rotasProdutos);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

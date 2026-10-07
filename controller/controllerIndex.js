@@ -13,3 +13,22 @@ exports.tela_principal = async function(req, res){
     // renderiza o arquivo index.hbs, dentro da pasta view
     res.render('index', contexto);
 }
+
+// Página sobre
+exports.tela_sobre = async function(req, res){
+    contexto = {
+        titulo: "Página sobre"
+    }
+    // renderiza o arquivo sobre.hbs, dentro da pasta view e passa o contexto para ser exibido dinâmicamente na tela.
+    res.render('sobre', contexto);
+}
+
+exports.tela_contato = async function(req, res){
+    contexto = {
+        titulo: "Página contato"
+    }
+    
+    // renderiz o arquivo contato e passa o titulo dinâmicamente para ser exibido na tela
+    res.render('contato.hbs', contexto);
+}
+

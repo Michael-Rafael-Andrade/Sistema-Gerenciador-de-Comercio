@@ -1,6 +1,6 @@
 var Cliente = require('./modelCliente.js');
 
-const lista_cliente = []; // será um vetor de objetos do tipo cliente
+const lista_cliente = {}; // será um objeto ao invés de usar o vetor de objeto
 
 class ClienteMemoria {
     // métodos assincronos para simular os métodos de um ORM
