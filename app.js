@@ -7,7 +7,7 @@ var logger = require('morgan');
 var rotasIndex = require('./routes/RotasIndex');
 var rotasUsers = require('./routes/RotasUsers');
 var rotasClientes = require('./routes/RotasClientes');
-var rotasProdutos = require('./routes/RoutesProdutos');
+var rotasProdutos = require('./routes/RotasProdutos');
 
 var app = express();
 
