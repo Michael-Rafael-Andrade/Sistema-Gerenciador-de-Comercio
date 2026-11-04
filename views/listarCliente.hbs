@@ -1,0 +1,61 @@
+{{titulo}}
+
+<fieldset>
+    <legend>
+        Clientes Cadastrados
+    </legend>
+
+    <fieldset>
+        <legend>
+            Busca
+        </legend>
+        <form action="/clientes/listar" method="GET">
+            <label for="busca">
+                Buscar:
+            </label>
+            <input type="text" name="busca" value="{{termoBuscado}}" placeholder="digite para buscar">
+            <button type="submit">Filtrar</button>
+            <a href="/clientes/listar">
+                <button type="button">Limpar Filtro</button>
+            </a>
+        </form>
+    </fieldset>
+
+    <table border="1">
+        <tr>
+            <th>
+                ID
+            </th>
+            <th>
+                NOME
+            </th>
+            <th>
+                AÇÕES
+            </th>
+        </tr>
+        {{#each clientes}}
+        <tr>
+            <td>
+                {{this.id}}
+            </td>
+            <td>
+                {{this.nome}}
+            </td>
+            <td>
+                <form action="/clientes/deletar" method="POST">
+                    <input type="hidden" name="id" value="{{this.id}}">
+                    <button type="submit">Deletar</button>
+                </form>
+                <!-- Redireciona via GET para a tabela de edição levando o ID -->
+                <a href="/clientes/atualiza?id={{this.id}}">
+                    <button type="button">Atualizar</button>
+                </a>
+                {{!-- <form action="/cliente/atualiza" method="POST">
+                    <input type="hidden" name="id" value="{{this.id}}">
+                    <button type="submit">Atualizar</button>
+                </form> --}}
+            </td>
+        </tr>
+        {{/each}}
+    </table>
+</fieldset>

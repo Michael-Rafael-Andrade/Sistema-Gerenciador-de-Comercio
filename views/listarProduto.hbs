@@ -1,0 +1,51 @@
+{{titulo}}
+<fieldset>
+    <legend>
+        Produtos Cadastrados
+    </legend>
+    <table border="1">
+        <tr>
+            <th>
+                ID
+            </th>
+            <th>
+                DESCRIÇÃO
+            </th>
+            <th>
+                QUANTIDADE
+            </th>
+            <th>
+                VALOR
+            </th>
+            <th>
+                AÇÕES
+            </th>
+        </tr>
+        {{#each produtos}}
+        <tr>
+            <td>
+                {{this.id}}
+            </td>
+            <td>
+                {{this.descricao}}
+            </td>
+            <td>
+                {{this.quantidade}}
+            </td>
+            <td>
+                {{this.valor}}
+            </td>
+            <td>
+                <form action="/produtos/deletar" method="POST">
+                    <input type="hidden" name="id" value="{{this.id}}">
+                    <button type="submit">Deletar</button>
+                </form>
+                <a href="/produtos/atualizar?id={{id}}">
+                    <input type="hidden" name="id" value="{{id}}" readonly>
+                    <button type="button">Atualizar</button>
+                </a>
+            </td>
+        </tr>
+        {{/each}}
+    </table>
+</fieldset>

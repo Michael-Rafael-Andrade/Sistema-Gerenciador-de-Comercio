@@ -6,16 +6,30 @@
     </legend>
     <form method="POST" action="/produtos/cadastrar">
         <p>
-            <label name="id">
+            <label for="id">
                 ID:
             </label>
             <input type="number" min="1" max="10" name="id">
         </p>
         <p>
-            <label name="nome">
-                Nome:
+            <label for="descricao">
+                DESCRIÇÃO:
             </label>
-            <input type="text" placeholder="digite o nome do produto">
+            <input type="text" placeholder="digite o nome do produto" name="descricao">
         </p>
+        <p>
+            <label name="quantidade">
+                QUANTIDADE:
+            </label>
+            <input type="number" min="0" max="100" name="quantidade" required>
+        </p>
+        <p>
+            <label for="valor">
+                VALOR:
+            </label>
+            <input type="number" name="valor" required>
+        </p>
+        <input type="submit">
+        <a href="/">Voltar</a>
     </form>
 </fieldset>

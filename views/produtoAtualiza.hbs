@@ -1,0 +1,26 @@
+{{titulo}}
+<hr>
+<fieldset>
+    <legend>
+        Atualizar cliente
+    </legend>
+    <form action="/produtos/atualizar" method="POST">
+        <label for="id">
+            ID
+        </label>
+        <input type="number" name="id" value="{{produto.id}}" readonly>
+        <label for="descricao">
+            Descrição
+        </label>
+        <input type="text" name="descricao" value="{{produto.descricao}}">
+        <label for="quantidade">
+            Quantidade
+        </label>
+        <input type="text" name="quantidade" value="{{produto.quantidade}}">
+        <label for="valor">
+            Valor
+        </label>
+        <input type="number" name="valor" value="{{produto.valor}}">
+        <input type="submit">
+    </form>
+</fieldset>

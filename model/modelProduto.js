@@ -22,7 +22,7 @@ class Produto{
 
     // Métodos SET
     set descricao(novaDescricao){
-        this._descricao = novaDescricao
+        this._descricao = novaDescricao;
     }
     set quantidade(novaQuantidade){
         this._quantidade = novaQuantidade;
@@ -32,4 +32,4 @@ class Produto{
     }
 }
 
-exports.module = Produto;
+module.exports = Produto;
